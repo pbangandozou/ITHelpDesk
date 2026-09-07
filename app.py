@@ -77,22 +77,59 @@ st.markdown(
         gap: 0.35rem;
     }
 
-    /* Make ALL sidebar text dark and readable */
-    section[data-testid="stSidebar"] label[data-baseweb="radio"],
-    section[data-testid="stSidebar"] label[data-baseweb="radio"] p,
-    section[data-testid="stSidebar"] label[data-baseweb="radio"] span,
-    section[data-testid="stSidebar"] label[data-baseweb="radio"] div,
-    section[data-testid="stSidebar"] .stMarkdown,
-    section[data-testid="stSidebar"] .stMarkdown p,
-    section[data-testid="stSidebar"] .stMarkdown span,
-    section[data-testid="stSidebar"] .stCaption,
-    section[data-testid="stSidebar"] [data-testid="stCaptionContainer"],
-    section[data-testid="stSidebar"] details,
-    section[data-testid="stSidebar"] details summary,
-    section[data-testid="stSidebar"] details p,
-    section[data-testid="stSidebar"] details span {
-        color: #172033 !important;
-    }
+/* Sidebar — force all text to black */
+section[data-testid="stSidebar"],
+section[data-testid="stSidebar"] * {
+    color: #000000 !important;
+}
+
+/* Sidebar background */
+section[data-testid="stSidebar"] {
+    background: #ffffff !important;
+    border-right: 1px solid var(--border);
+}
+
+/* Sidebar navigation text */
+section[data-testid="stSidebar"] label[data-baseweb="radio"],
+section[data-testid="stSidebar"] label[data-baseweb="radio"] *,
+section[data-testid="stSidebar"] .stRadio label,
+section[data-testid="stSidebar"] .stRadio label *,
+section[data-testid="stSidebar"] .stMarkdown,
+section[data-testid="stSidebar"] .stMarkdown *,
+section[data-testid="stSidebar"] .stCaption,
+section[data-testid="stSidebar"] .stCaption *,
+section[data-testid="stSidebar"] details,
+section[data-testid="stSidebar"] details *,
+section[data-testid="stSidebar"] summary,
+section[data-testid="stSidebar"] summary * {
+    color: #000000 !important;
+}
+
+/* Sidebar navigation buttons */
+section[data-testid="stSidebar"] label[data-baseweb="radio"] {
+    color: #000000 !important;
+    background: transparent !important;
+}
+
+/* Hover */
+section[data-testid="stSidebar"] label[data-baseweb="radio"]:hover {
+    background: #f1f5f9 !important;
+    color: #000000 !important;
+}
+
+/* Selected navigation item */
+section[data-testid="stSidebar"] label[data-baseweb="radio"][aria-checked="true"],
+section[data-testid="stSidebar"] label[data-baseweb="radio"][aria-checked="true"] * {
+    color: #000000 !important;
+}
+
+/* Demo data expander */
+section[data-testid="stSidebar"] details summary,
+section[data-testid="stSidebar"] details summary *,
+section[data-testid="stSidebar"] details p,
+section[data-testid="stSidebar"] details span {
+    color: #000000 !important;
+}
 
     section[data-testid="stSidebar"] label[data-baseweb="radio"] {
         border-radius: 8px;
